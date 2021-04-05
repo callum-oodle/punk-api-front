@@ -5,12 +5,17 @@ export const CardWrapper = styled.div`
   padding: 1rem;
   text-decoration: none;
   border: 1px solid #eaeaea;
+  width: 350px;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
 
   &:hover {
     color: #0070f3;
     border-color: #0070f3;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
   }
 `
 

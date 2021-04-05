@@ -2,7 +2,7 @@ import React from 'react'
 import LayoutContainer from '../components/LayoutContainer'
 import { GetStaticProps } from 'next'
 import BeerCard from '../components/BeerCard'
-import { Grid } from '../components/Grid/styles'
+import { CardGrid } from '../components/CardGrid/styles'
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch('https://api.punkapi.com/v2/beers')
@@ -32,11 +32,11 @@ const Home: React.FC<Props> = ({ beers }: Props) => {
   return (
     <>
       <LayoutContainer>
-        <Grid>
+        <CardGrid>
           {beers.map((beer) => (
             <BeerCard key={beer.id} beer={beer} />
           ))}
-        </Grid>
+        </CardGrid>
       </LayoutContainer>
     </>
   )
